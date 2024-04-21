@@ -1,10 +1,10 @@
-import person_creator as prs
+import src.entity_fabrics.person_fabric as prsfab
+import src.entity_fabrics.client_fabric as clntfab
 
-if __name__ == '__main__':
-    person = prs.Person()
-    print(person.name)
-    print(person.surname)
-    print(person.gender)
-    print(person.telephone)
-    print(person.mail)
-    print(person.pesel)
+if __name__ == "__main__":
+	persons = prsfab.person_fabric(10)
+	clients = clntfab.client_fabric(5, persons)
+	client = clients[0]
+
+	print(client.person_reference)
+	print(client.person_name)
