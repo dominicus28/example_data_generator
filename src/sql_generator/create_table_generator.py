@@ -6,6 +6,6 @@ def gen(table, *args):
     final = text1.format(table, text3)
 
     with open('script.sql', 'a') as f:
-        f.write(final)
+        f.write(final+"\n\n")
 
     f.close()

@@ -18,17 +18,19 @@
     "tab_name": "my_client",
     "rows": 5,
     "PSESEL_number": "PESEL",
+    "primary_key": "PESEL INT NOT NULL AUTO_INCREMENT",
     "driving_license_number": "license_num",
-    "id_card_number" : null
+    "id_card_number" : null,
+    "person_id_fk": "person_id INT"
     },
     {
     "tab": "employee",
-    "exist": false,
+    "exist": true,
     "tab_name": "my_employee",
     "rows": 5,
     "primary_key": "id INT NOT NULL AUTO_INCREMENT",
     "position": "position VARCHAR(255)",
-    "person_id": "FOREIGN KEY (person_id) REFERENCES my_person(id)"
+    "person_id_fk": "person_id INT"
     }
   ]
 }
