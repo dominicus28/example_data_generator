@@ -1,10 +1,11 @@
-import src.entity_fabrics.person_fabric as prsfab
-import src.entity_fabrics.client_fabric as clntfab
+import src.config_validator as validator
+import src.start as start
+import os
 
 if __name__ == "__main__":
-	persons = prsfab.person_fabric(10)
-	clients = clntfab.client_fabric(5, persons)
-	client = clients[0]
 
-	print(client.person_reference)
-	print(client.person_name)
+	if os.path.exists("script.sql"):
+		os.remove("script.sql")
+
+	validator.check_dependencies()
+	start.read_config_and_run()

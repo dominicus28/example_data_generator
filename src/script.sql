@@ -1,0 +1,1 @@
+CREATE TABLE my_person (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), gender CHAR(0), surname VARCHAR(255), tel INT);

@@ -94,10 +94,13 @@ class ClientBuilder:
         return digits + '/' + year + '/' + county_number
 
 class Client:
-    def __init__(self, person, id):
-        self.pesel = ClientBuilder.create_pesel(person.gender)
-        self.id_card_number = ClientBuilder.create_id_number()
-        self.driving_license_number = ClientBuilder.create_driving_lic_number()
+    def __init__(self, person, id, pesel, id_card_number, driving_license_number):
+        if pesel is not None:
+            self.pesel = ClientBuilder.create_pesel(person.gender)
+        if id_card_number is not None:
+            self.id_card_number = ClientBuilder.create_id_number()
+        if driving_license_number is not None:
+            self.driving_license_number = ClientBuilder.create_driving_lic_number()
         self.person_reference = id
 
 

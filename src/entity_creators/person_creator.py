@@ -1,4 +1,3 @@
-import src.utilities as utils
 import random
 import string
 import src.mysql_config as mysql
@@ -38,13 +37,18 @@ class PersonBuilder:
         return myresult
 
 class Person:
-    def __init__(self):
+    def __init__(self, name, gender, surname, telephone, mail):
         row = PersonBuilder.select_random_person()
-        self.name = row[0]
-        self.gender = row[1]
-        self.surname = PersonBuilder.select_random_surname(self.gender)[0]
-        self.telephone = PersonBuilder.create_telephone()
-        self.mail = PersonBuilder.create_mail()
+        if name is not None:
+            self.name = row[0]
+        if gender is not None:
+            self.gender = row[1]
+        if surname is not None:
+            self.surname = PersonBuilder.select_random_surname(self.gender)[0]
+        if telephone is not None:
+            self.telephone = PersonBuilder.create_telephone()
+        if mail is not None:
+            self.mail = PersonBuilder.create_mail()
 
 
 

@@ -1,0 +1,34 @@
+{
+  "tabs": [
+    {
+    "tab": "person",
+    "exist": true,
+    "tab_name": "my_person",
+    "rows": 10,
+    "primary_key": "id INT NOT NULL AUTO_INCREMENT",
+    "name": "name VARCHAR(255)",
+    "surname": "surname VARCHAR(255)",
+    "telephone": "tel INT",
+    "mail": null,
+    "gender": "gender CHAR(0)"
+    },
+    {
+    "tab": "client",
+    "exist": true,
+    "tab_name": "my_client",
+    "rows": 5,
+    "PSESEL_number": "PESEL",
+    "driving_license_number": "license_num",
+    "id_card_number" : null
+    },
+    {
+    "tab": "employee",
+    "exist": false,
+    "tab_name": "my_employee",
+    "rows": 5,
+    "primary_key": "id INT NOT NULL AUTO_INCREMENT",
+    "position": "position VARCHAR(255)",
+    "person_id": "FOREIGN KEY (person_id) REFERENCES my_person(id)"
+    }
+  ]
+}
