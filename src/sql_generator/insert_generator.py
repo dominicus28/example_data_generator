@@ -7,7 +7,7 @@ def generate(table, *args):
     text3 = text2.format(*args)
     final = text1.format(table, text3)
 
-    with open('script.sql', 'a') as f:
+    with open('script.sql', 'a', encoding="utf-8") as f:
         f.write(final+"\n\n")
 
     f.close()
