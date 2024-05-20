@@ -1,0 +1,2 @@
+stencils available to use in config.json: name, surname, email, pesel, id_card, driving_license, work_position,
+telephone, id, random_int, random_string, gender

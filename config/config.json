@@ -1,36 +1,46 @@
 {
   "tabs": [
     {
-    "tab": "person",
-    "exist": true,
-    "tab_name": "my_person",
-    "rows": 10,
-    "primary_key": "id INT NOT NULL AUTO_INCREMENT",
-    "name": "name VARCHAR(255)",
-    "surname": "surname VARCHAR(255)",
-    "telephone": "tel INT",
-    "mail": null,
-    "gender": "gender CHAR(0)"
+      "name": "client",
+      "rows": 500,
+      "columns": [
+        {
+          "name": "driving_license_number",
+          "stencil": "driving_license"
+        },
+        {
+          "name": "id_card_number",
+          "stencil": "id_card"
+        },
+        {
+          "name": "person_id",
+          "foreign_key": true,
+          "reference": "person.id"
+        }
+      ]
     },
     {
-    "tab": "client",
-    "exist": true,
-    "tab_name": "my_client",
-    "rows": 5,
-    "PSESEL_number": "PESEL",
-    "primary_key": "PESEL INT NOT NULL AUTO_INCREMENT",
-    "driving_license_number": "license_num",
-    "id_card_number" : null,
-    "person_id_fk": "person_id INT"
-    },
-    {
-    "tab": "employee",
-    "exist": true,
-    "tab_name": "my_employee",
-    "rows": 5,
-    "primary_key": "id INT NOT NULL AUTO_INCREMENT",
-    "position": "position VARCHAR(255)",
-    "person_id_fk": "person_id INT"
+      "name": "person",
+      "rows": 1000,
+      "columns": [
+        {
+          "name": "id",
+          "stencil": "pesel",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "stencil": "name"
+        },
+        {
+          "name": "surname",
+          "stencil": "surname"
+        },
+        {
+          "name": "pesel",
+          "stencil": "pesel"
+        }
+      ]
     }
   ]
 }
