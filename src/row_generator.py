@@ -11,10 +11,11 @@ def generate_row(tab, rows_quantity, columns):
     has_surname = any(column.split('.')[-1] == 'surname' for column in columns)
     if has_id:
         iterator = id.integer_generator()
-    if has_gender or has_name or has_surname:
-        tmp = map.mapper("gender")
 
     for _ in range(rows_quantity):
+        if has_gender or has_name or has_surname:
+            tmp = map.mapper("gender")
+
         values = []
         for column in columns:
             if not column.split(".")[0] == "ref":
