@@ -2,7 +2,7 @@
   "tabs": [
     {
       "name": "client",
-      "rows": 5,
+      "rows": 100,
       "columns": [
         {
           "name": "driving_license_number",

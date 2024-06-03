@@ -9,6 +9,11 @@ import src.stencils.random_string as random_string
 import src.stencils.surname as surname
 import src.stencils.telephone as telephone
 import src.stencils.work_position as work_position
+import src.stencils.address as address
+import src.stencils.date as date
+import src.stencils.random_boolean as random_boolean
+import src.stencils.cost as cost
+import src.stencils.car_data as car_data
 
 def unknown_command():
     print("Unknown method. Please try again.")
@@ -26,7 +31,16 @@ methods = {
     "random_string": random_string.generate_random_string,
     "surname": surname.select_random_surname,  # gender as arg
     "telephone": telephone.create_telephone,
-    "work_position": work_position.create_position
+    "work_position": work_position.create_position,
+    "town": address.generate_random_address,
+    "street": address.generate_random_address,
+    "postal_code": address.generate_random_address,
+    "coordinates": address.generate_random_address,
+    "date_from": date.generate_random_datetime,
+    "date_to": date.generate_random_datetime,
+    "random_boolean": random_boolean.generate_random_boolean,
+    "cost": cost.generate_random_cost,
+    "car_data": car_data.select_random_car
 }
 
 
