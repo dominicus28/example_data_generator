@@ -4,7 +4,12 @@ def generate(table, *args):
     # print(*args)
     #
     # print(text2)
-    text3 = text2.format(*args)
+    formatted_args = [
+        f'"{arg}"' if 'Point' not in str(arg) else str(arg)
+        for arg in args
+    ]
+
+    text3 = text2.format(*formatted_args)
     final = text1.format(table, text3)
 
     with open('script.sql', 'a', encoding="utf-8") as f:

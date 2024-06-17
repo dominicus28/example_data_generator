@@ -25,16 +25,17 @@ def read_config_and_run():
                     else:
                         columns_tmp.append(column["stencil"])
                 columns.append(columns_tmp)
-                columns_tmp = []
             else:
                 for column in tab["columns"]:
-                    if "foreign_key" in column:
+                    if "foreign_key" in column and tab["name"] not in tab_order:
                         if column["reference"].split(".")[0] in tab_order:
                             tab_order.append(tab["name"])
                             rows_quantity.append(tab["rows"])
                             for column in tab["columns"]:
                                 if "foreign_key" in column:
                                     columns_tmp.append("ref."+column["reference"])
+                                elif "primary_key" in column:
+                                    columns_tmp.append("pk." + column["name"] + "." + column["stencil"])
                                 else:
                                     columns_tmp.append(column["stencil"])
                             columns.append(columns_tmp)

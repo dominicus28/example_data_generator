@@ -1,3 +1,3 @@
 stencils available to use in config.json: name, surname, email, pesel, id_card, driving_license, work_position,
 telephone, id, random_int, random_string, gender, town, street, postal_code, coordinates, date_from, date_to,
-random_boolean, cost
+random_boolean, cost, VIN, brand, model, version, production_year, engine, color

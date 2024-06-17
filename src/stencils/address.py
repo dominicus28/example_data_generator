@@ -20,4 +20,4 @@ def generate_random_address(scope):
     elif scope == "postal_code":
         return fake.postcode()
     elif scope == "coordinates":
-        return "Point({} {})".format(str(fake.latitude()), str(fake.longitude()))
+        return "Point({}, {})".format(str(fake.latitude()), str(fake.longitude()))

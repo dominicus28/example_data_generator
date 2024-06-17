@@ -47,10 +47,10 @@ def generate_row(tab, rows_quantity, columns):
                     arg = column.split(".")[-1] + " " + tmp[1]
                     result = map.mapper(arg)
                 elif column.split(".")[-1] == "date_from" and tmp_date:
-                    result = map.mapper(column.split(".")[-1])[0]
+                    result = tmp_date[0]
                 elif column.split(".")[-1] == "date_to" and tmp_date:
-                    result = map.mapper(column.split(".")[-1])[1]
-                elif "date" in column.split(".")[-1]:
+                    result = tmp_date[1]
+                elif "date" in column.split(".")[-1] and not tmp_date:
                     result = map.mapper(column.split(".")[-1])[0]
                 elif column.split(".")[-1] == "town":
                     arg = column.split(".")[-1] + " " + "town"

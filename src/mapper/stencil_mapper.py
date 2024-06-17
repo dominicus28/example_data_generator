@@ -36,8 +36,7 @@ methods = {
     "street": address.generate_random_address,
     "postal_code": address.generate_random_address,
     "coordinates": address.generate_random_address,
-    "date_from": date.generate_random_datetime,
-    "date_to": date.generate_random_datetime,
+    "date": date.generate_random_datetime,
     "random_boolean": random_boolean.generate_random_boolean,
     "cost": cost.generate_random_cost,
     "car_data": car_data.select_random_car
@@ -50,6 +49,7 @@ def mapper(user_input):
     command_name = parts[0]
     args = parts[1:]
 
+    # print(command_name)
     command = methods.get(command_name, unknown_command)
 
     try:

@@ -1,9 +1,35 @@
 {
   "tabs": [
     {
-      "name": "client",
-      "rows": 100,
+      "name": "rental_client",
+      "rows": 20,
       "columns": [
+        {
+          "name": "id",
+          "stencil": "id",
+          "primary_key": true
+        },
+        {
+          "name": "client_id",
+          "foreign_key": true,
+          "reference": "client.id"
+        },
+        {
+          "name": "rental_id",
+          "foreign_key": true,
+          "reference": "rental.id"
+        }
+      ]
+    },
+    {
+      "name": "client",
+      "rows": 10,
+      "columns": [
+        {
+          "name": "id",
+          "stencil": "id",
+          "primary_key": true
+        },
         {
           "name": "driving_license_number",
           "stencil": "driving_license"
@@ -20,12 +46,32 @@
       ]
     },
     {
+      "name": "employee",
+      "rows": 5,
+      "columns": [
+        {
+          "name": "id",
+          "stencil": "id",
+          "primary_key": true
+        },
+        {
+          "name": "position",
+          "stencil": "work_position"
+        },
+        {
+          "name": "person_id",
+          "foreign_key": true,
+          "reference": "person.id"
+        }
+      ]
+    },
+    {
       "name": "person",
       "rows": 10,
       "columns": [
         {
           "name": "id",
-          "stencil": "pesel",
+          "stencil": "id",
           "primary_key": true
         },
         {
@@ -39,6 +85,147 @@
         {
           "name": "pesel",
           "stencil": "pesel"
+        },
+        {
+          "name": "telephone",
+          "stencil": "telephone"
+        },
+        {
+          "name": "mail",
+          "stencil": "mail"
+        },
+        {
+          "name": "gender",
+          "stencil": "gender"
+        }
+      ]
+    },
+    {
+      "name": "rental",
+      "rows": 20,
+      "columns": [
+        {
+          "name": "id",
+          "stencil": "id",
+          "primary_key": true
+        },
+        {
+          "name": "car_id",
+          "foreign_key": true,
+          "reference": "car.id"
+        },
+        {
+          "name": "employee_id",
+          "foreign_key": true,
+          "reference": "employee.id"
+        },
+        {
+          "name": "rent_place_id",
+          "foreign_key": true,
+          "reference": "place.id"
+        },
+        {
+          "name": "return_place_id",
+          "foreign_key": true,
+          "reference": "place.id"
+        },
+        {
+          "name": "date_to",
+          "stencil": "date_to"
+        },
+        {
+          "name": "date_form",
+          "stencil": "date_from"
+        }
+      ]
+    },
+    {
+      "name": "car",
+      "rows": 10,
+      "columns": [
+        {
+          "name": "id",
+          "stencil": "id",
+          "primary_key": true
+        },
+        {
+          "name": "vin",
+          "stencil": "VIN"
+        },
+        {
+          "name": "brand",
+          "stencil": "brand"
+        },
+        {
+          "name": "model",
+          "stencil": "model"
+        },
+        {
+          "name": "version",
+          "stencil": "version"
+        },
+        {
+          "name": "production_year",
+          "stencil": "production_year"
+        },
+        {
+          "name": "engine",
+          "stencil": "engine"
+        },
+        {
+          "name": "color",
+          "stencil": "color"
+        },
+        {
+          "name": "available",
+          "stencil": "random_boolean"
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "rows": 5,
+      "columns": [
+        {
+          "name": "id",
+          "stencil": "id",
+          "primary_key": true
+        },
+        {
+          "name": "town",
+          "stencil": "town"
+        },
+        {
+          "name": "street",
+          "stencil": "street"
+        },
+        {
+          "name": "postal_code",
+          "stencil": "postal_code"
+        },
+        {
+          "name": "coordinates",
+          "stencil": "coordinates"
+        }
+      ]
+    },
+    {
+      "name": "car_location_history",
+      "rows": 50,
+      "columns": [
+        {
+          "name": "id",
+          "stencil": "id",
+          "primary_key": true
+        },
+        {
+          "name": "car_id",
+          "foreign_key": true,
+          "reference": "car.id"
+        },
+        {
+          "name": "coordinates",
+          "stencil": "coordinates"
         }
       ]
     }
