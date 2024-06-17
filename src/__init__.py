@@ -1,1 +1,1 @@
-__all__ = ["stencils", "sql_generator", "row_generator"]
+__all__ = ["stencils", "sql_generator", "row_generator", "utilities"]

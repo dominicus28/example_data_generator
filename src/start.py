@@ -1,7 +1,9 @@
 import json
 import itertools
 import src.row_generator as gen
+from utilities import timeit
 
+@timeit
 def read_config_and_run():
     f = open("../config/config.json")
     data = json.load(f)

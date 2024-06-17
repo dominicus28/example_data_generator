@@ -2,7 +2,7 @@
   "tabs": [
     {
       "name": "rental_client",
-      "rows": 20,
+      "rows": 11500,
       "columns": [
         {
           "name": "id",
@@ -23,7 +23,7 @@
     },
     {
       "name": "client",
-      "rows": 10,
+      "rows": 11700,
       "columns": [
         {
           "name": "id",
@@ -47,7 +47,7 @@
     },
     {
       "name": "employee",
-      "rows": 5,
+      "rows": 220,
       "columns": [
         {
           "name": "id",
@@ -67,7 +67,7 @@
     },
     {
       "name": "person",
-      "rows": 10,
+      "rows": 13400,
       "columns": [
         {
           "name": "id",
@@ -102,7 +102,7 @@
     },
     {
       "name": "rental",
-      "rows": 20,
+      "rows": 40000,
       "columns": [
         {
           "name": "id",
@@ -141,7 +141,7 @@
     },
     {
       "name": "car",
-      "rows": 10,
+      "rows": 200,
       "columns": [
         {
           "name": "id",
@@ -184,7 +184,7 @@
     },
     {
       "name": "place",
-      "rows": 5,
+      "rows": 1400,
       "columns": [
         {
           "name": "id",
@@ -211,7 +211,7 @@
     },
     {
       "name": "car_location_history",
-      "rows": 50,
+      "rows": 14000,
       "columns": [
         {
           "name": "id",
